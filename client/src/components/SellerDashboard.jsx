@@ -35,7 +35,7 @@ function SellerDashboard() {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/book/seller/stats/${sellerId}`,
+          `${process.env.REACT_APP_BACKEND_URL}/book/seller/stats/${sellerId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         console.log("GET /book/seller/stats response:", res.data);

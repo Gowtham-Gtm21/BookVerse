@@ -47,7 +47,7 @@ const AddBook = () => {
       }
 
       const res = await axios.post(
-        "http://localhost:8080/book/add-book",
+        `${process.env.REACT_APP_BACKEND_URL}/book/add-book`,
         formData,
         {
           headers: {

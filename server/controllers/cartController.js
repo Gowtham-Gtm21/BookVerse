@@ -102,10 +102,11 @@ const getcartItems = async (req, res) => {
       }
 
       if (image && !image.startsWith("http://") && !image.startsWith("https://")) {
-        if (image.startsWith("/uploads")) image = `http://localhost:8080${image}`;
-        else if (image.startsWith("uploads/")) image = `http://localhost:8080/${image}`;
-        else if (image.startsWith("/")) image = `http://localhost:8080${image}`;
-        else image = `http://localhost:8080/uploads/${image}`;
+        const hostBase = `${req.protocol}://${req.get('host')}`;
+        if (image.startsWith("/uploads")) image = `${hostBase}${image}`;
+        else if (image.startsWith("uploads/")) image = `${hostBase}/${image}`;
+        else if (image.startsWith("/")) image = `${hostBase}${image}`;
+        else image = `${hostBase}/uploads/${image}`;
       }
 
       preparedItems.push({ ...it.toObject(), image });

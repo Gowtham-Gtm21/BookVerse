@@ -33,7 +33,7 @@ const BuyNowForm = () => {
     };
 
     try {
-      await axios.post("http://localhost:8080/order/my-orders", orderDetail, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/order/my-orders`, orderDetail, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

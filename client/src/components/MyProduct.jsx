@@ -14,7 +14,7 @@ function MyProduct() {
   const loadMyProducts = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/book/my-products/${sellerId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/book/my-products/${sellerId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -30,7 +30,7 @@ function MyProduct() {
   const deleteproduct = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8080/book/delete-book/${id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/book/delete-book/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

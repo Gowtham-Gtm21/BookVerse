@@ -9,7 +9,7 @@ const getBook = async (req, res) => {
       let imageUrl = book.image;
 
       if (!imageUrl.startsWith("http")) {
-        imageUrl = `http://localhost:8080/uploads/${imageUrl}`;
+        imageUrl = `${req.protocol}://${req.get('host')}/uploads/${imageUrl}`;
       }
 
       return {
@@ -118,7 +118,7 @@ const getMyProducts = async (req, res) => {
       let imageUrl = book.image;
 
       if (!imageUrl.startsWith("http")) {
-        imageUrl = `http://localhost:8080/uploads/${imageUrl}`;
+        imageUrl = `${req.protocol}://${req.get('host')}/uploads/${imageUrl}`;
       }
 
       return {

@@ -23,7 +23,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:8080/user/login`, user, {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, user, {
         headers: { "Content-Type": "application/json" },
       });
 

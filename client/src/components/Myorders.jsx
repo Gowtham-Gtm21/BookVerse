@@ -13,7 +13,7 @@ const Myorders = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:8080/order/get-order/${id}`, {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/order/get-order/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -31,7 +31,7 @@ const Myorders = () => {
     if (!ok) return;
 
     try {
-      await axios.delete(`http://localhost:8080/order/delete-order/${orderId}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/order/delete-order/${orderId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -55,10 +55,10 @@ const Myorders = () => {
   const getImageSrc = (img) => {
     if (!img) return "https://via.placeholder.com/220x300?text=No+Image";
     if (img.startsWith("http://") || img.startsWith("https://")) return img;
-    if (img.startsWith("/uploads")) return `http://localhost:8080${img}`;
-    if (img.startsWith("uploads/")) return `http://localhost:8080/${img}`;
-    if (img.startsWith("/")) return `http://localhost:8080${img}`;
-    return `http://localhost:8080/uploads/${img}`;
+    if (img.startsWith("/uploads")) return `${process.env.REACT_APP_BACKEND_URL}${img}`;
+    if (img.startsWith("uploads/")) return `${process.env.REACT_APP_BACKEND_URL}/${img}`;
+    if (img.startsWith("/")) return `${process.env.REACT_APP_BACKEND_URL}${img}`;
+    return `${process.env.REACT_APP_BACKEND_URL}/uploads/${img}`;
   };
 
   if (loading) {

@@ -14,7 +14,7 @@ function SellerOrder() {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8080/book/seller-order/${sellerId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/book/seller-order/${sellerId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

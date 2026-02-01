@@ -17,7 +17,7 @@ function BookList() {
   /* Load All Books */
   const loadBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/book/get-book", {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/book/get-book`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -61,7 +61,7 @@ function BookList() {
   const addToCart = async (bookId) => {
     try {
       await axios.post(
-        "http://localhost:8080/cart/addcart",
+        `${process.env.REACT_APP_BACKEND_URL}/cart/addcart`,
         { bookId, quantity: 1 },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -81,7 +81,7 @@ function BookList() {
   /* Delete Book (Admin Only) */
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/book/delete-book/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/book/delete-book/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

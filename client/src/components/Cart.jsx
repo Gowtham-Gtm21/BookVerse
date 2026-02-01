@@ -12,7 +12,7 @@ const Cart = () => {
 
   const getCart = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/cart/get-cart/${id}`, {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/cart/get-cart/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -27,7 +27,7 @@ const Cart = () => {
   const deleteCartItem = async (bookId) => {
     try {
       await axios.delete(
-        `http://localhost:8080/cart/deleteCart/${id}/${bookId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/cart/deleteCart/${id}/${bookId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -63,11 +63,11 @@ const Cart = () => {
   const getImageSrc = (img) => {
     if (!img) return "https://via.placeholder.com/220x300?text=No+Image";
     if (img.startsWith("http://") || img.startsWith("https://")) return img;
-    if (img.startsWith("/uploads")) return `http://localhost:8080${img}`;
-    if (img.startsWith("uploads/")) return `http://localhost:8080/${img}`;
-    if (img.startsWith("/")) return `http://localhost:8080${img}`;
+    if (img.startsWith("/uploads")) return `${process.env.REACT_APP_BACKEND_URL}${img}`;
+    if (img.startsWith("uploads/")) return `${process.env.REACT_APP_BACKEND_URL}/${img}`;
+    if (img.startsWith("/")) return `${process.env.REACT_APP_BACKEND_URL}${img}`;
     // filename only (saved by multer as filename)
-    return `http://localhost:8080/uploads/${img}`;
+    return `${process.env.REACT_APP_BACKEND_URL}/uploads/${img}`;
   };
 
   if (!carts.items || carts.items.length === 0) {

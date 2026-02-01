@@ -36,7 +36,7 @@ const Dashboard = () => {
 
   const getStats = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/admin/dashboard", {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/admin/dashboard`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStats(res.data);

@@ -14,7 +14,7 @@ function SellerList() {
     try {
       const role = "seller";
       const res = await axios.get(
-        `http://localhost:8080/user/get-user/${role}`,
+        `${process.env.REACT_APP_BACKEND_URL}/user/get-user/${role}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -30,7 +30,7 @@ function SellerList() {
       const ok = window.confirm("Delete this seller? This will remove their products and orders.");
       if (!ok) return;
 
-      await axios.delete(`http://localhost:8080/user/delete-user/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/user/delete-user/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
