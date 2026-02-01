@@ -1,0 +1,1021 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #f4f7ff;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body, * {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===================== NAVBAR UI ===================== */
+
+.custom-nav {
+  backdrop-filter: blur(12px);
+  padding: 15px 95px;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #222;
+}
+
+.brand-accent {
+  color: #4e60ff;
+}
+
+.nav-btn {
+  border: none;
+  background: transparent;
+  color: #222;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  color: #3d4ced;
+}
+
+.btn-primary-nav {
+  background: linear-gradient(135deg, #4e60ff, #2a37ff);
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary-nav:hover {
+  background: linear-gradient(135deg, #3d4ced, #1a24ff);
+}
+
+.btn-outline-nav {
+  background: transparent;
+  border: 2px solid #4e60ff;
+  padding: 7px 16px;
+  border-radius: 6px;
+  color: #4e60ff;
+  cursor: pointer;
+}
+
+.btn-outline-nav:hover {
+  background: #4e60ff;
+  color: white;
+}
+
+.logout {
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* ===================== LOGIN + REGISTER SHARED WIDTH ===================== */
+
+.login-card,
+.register-card {
+  width: 400px !important;
+  max-width: 100%;
+}
+
+/* ===================== LOGIN PAGE ===================== */
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  padding-top: 70px;
+  background: linear-gradient(to bottom right, #e8eef2, #d3dde3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9fafb;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #4e60ff;
+  box-shadow: 0 0 4px rgba(78, 96, 255, 0.4);
+}
+
+.forgot-text {
+  text-align: left;
+  font-size: 14px;
+  color: #4e60ff;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #4e60ff;
+  border: none;
+  margin-top: -12px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #3d4ced;
+}
+
+.signup-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-link {
+  color: #4e60ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-message {
+  margin-top: 12px;
+  color: green;
+  font-weight: bold;
+}
+
+/* ===================== REGISTER PAGE ===================== */
+
+.register-page {
+  width: 100%;
+  height: 100vh;
+  padding-top: 70px;
+  background: linear-gradient(to bottom right, #e8eef2, #d3dde3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-input {
+  padding: 14px;
+  border: 1px solid #d0d7de;
+  background: #f9fafb;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.register-input:focus {
+  border-color: #4e60ff;
+  box-shadow: 0 0 4px rgba(78, 96, 255, 0.3);
+}
+
+.register-btn {
+  padding: 14px;
+  background: #4e60ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.register-btn:hover {
+  background: #3d4ced;
+}
+
+.register-bottom-text {
+  margin-top: 18px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #4e60ff;
+  margin-left: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: 600;
+}
+
+
+/* ========== SEARCH BAR ========== */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 280px;
+  padding: 12px 14px;
+  border: 1px solid #bfc6d1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-input:focus {
+  border-color: #4e60ff;
+  box-shadow: 0 0 5px rgba(78, 96, 255, 0.3);
+}
+
+.search-btn {
+  padding: 12px 25px;
+  background: #4e60ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background: #3d4ced;
+}
+
+/* ========== BOOK CARD ========== */
+.book-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.book-card:hover {
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* ========== BOOK IMAGE (LARGER) ========== */
+.book-img {
+  width: 100%;
+  height: 360px;
+  object-fit: fill;
+  border-radius: 6px;
+}
+
+/* TEXT */
+.book-title {
+  font-weight: 600;
+  margin: 15px 0 6px 0;
+}
+
+.book-text {
+  margin: 8px 0;
+  color: #444;
+}
+
+.book-cart {
+  background: #111;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-cart:hover {
+  background: #222;
+  color: white;
+}
+
+.book-buy {
+  background: #4e60ff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-buy:hover {
+  background: #3d4ced;
+  color: white;
+}
+
+
+
+/* ===================== CART PAGE ===================== */
+.cart-page {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+/* Empty Cart */
+.empty-cart-text {
+  margin-top: 7rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ===================== GRID ===================== */
+.cart-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ===================== CARD ===================== */
+/* ================= CART PAGE ================= */
+.cart-page {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+/* Empty Cart */
+.empty-cart-text {
+  margin-top: 7rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ================= CARD ================= */
+.cart-card {
+  border-radius: 6px;
+  padding: 15px;
+  overflow: hidden;
+  transition: 0.25s ease;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.cart-card:hover {
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* IMAGE EXACTLY LIKE BOOKLIST */
+.cart-book-img {
+  width: 100%;
+  height: 350px;
+  object-fit: fill;
+  border-radius: 6px;
+}
+
+/* TITLE */
+.cart-item-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+/* BUTTON GROUP */
+.cart-btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-btn {
+  flex: 1;
+  padding: 0.55rem;
+  font-weight: 600;
+  border-radius: 8px !important;
+}
+
+/* TOTAL BOX */
+.cart-total-box {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: #f1f5f9;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* ============================
+   Checkout PAGE STYLING
+   ============================ */
+
+/* Checkout Page */
+.checkout-page {
+  margin-top: 9rem;
+  margin-bottom: 5rem;
+}
+
+/* Main card */
+.checkout-card {
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.checkout-img {
+  width: 95px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Order summary box */
+.order-summary {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.total-line {
+  font-size: 1.1rem;
+}
+
+/* Button enhancement */
+.btn-primary {
+  background-color: #4e60ff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.btn-primary:disabled {
+  background-color: #9abcf5;
+  border: none;
+}
+
+
+/* ===== My Orders (grid + cards) ===== */
+.myorders-page {
+  padding-top: 110px;
+  padding-bottom: 80px;
+  background: #f6f8fb;
+  /* subtle background */
+}
+
+/* Title */
+.myorders-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 28px;
+}
+
+/* Container */
+.container {
+  max-width: 1300px;
+}
+
+/* Card */
+.order-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e6edf3;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 15px;
+}
+
+.order-card:hover {
+  box-shadow: 0 16px 40px rgba(16, 24, 40, 0.38);
+}
+
+/* Image wrapper */
+.order-card-image-wrap {
+  background: #fff;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-card-image {
+  width: 100%;
+  height: 350px;
+  object-fit: fill;
+  border-radius: 6px;
+}
+
+/* Heading */
+.order-heading {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+/* Strong labels */
+.order-card p strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Cancel button */
+.cancel-btn {
+  border-radius: 10px !important;
+  padding: 10px 12px;
+  font-weight: 700;
+  background: #e63946;
+  border-color: #e63946;
+}
+
+.cancel-btn:hover {
+  background: #d6333b;
+  border-color: #d6333b;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .order-card {
+    min-height: 520px;
+    /* keep same look on small screens */
+  }
+
+  .order-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .order-card {
+    min-height: auto;
+  }
+
+  .order-card-image {
+    height: 180px;
+  }
+}
+
+
+
+/* ===============================
+   ADD BOOK — CARD STYLE
+================================= */
+
+.addbook-card {
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.addbook-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Input fields */
+.addbook-input {
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  border: 1px solid #d1d5db !important;
+  transition: 0.25s ease !important;
+  font-size: 0.95rem;
+}
+
+.addbook-input:focus {
+  border-color: #4e60ff !important;
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.2) !important;
+}
+
+/* Labels */
+.form-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Preview image */
+.addbook-preview {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #e5e7eb;
+}
+
+/* Submit button */
+.addbook-btn {
+  background: #4e60ff !important;
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+.addbook-btn:hover {
+  background: #3d4ced !important;
+  transform: translateY(-2px);
+}
+
+/* Smooth card hover */
+.card:hover {
+  transition: 0.3s ease;
+}
+
+
+/* ============================================
+   SELLER ORDER PAGE — BOOKVERSE THEME
+=============================================== */
+
+/* Background like screenshot */
+.sellerorder-page {
+  padding: 40px;
+  margin-top: 100px;
+  background: linear-gradient(to bottom, #f8fbff, #eef3ff);
+  min-height: 90vh;
+}
+
+/* Page Title */
+.sellerorder-title {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1e293b;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* White card container */
+.sellerorder-card {
+  background: white;
+  border-radius: 6px;
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  max-width: 1300px;
+  margin: auto;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.sellerorder-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.sellerorder-table th {
+  padding: 15px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: #0f172a;
+  color: white !important;
+  border: none;
+}
+
+/* TABLE BODY */
+.sellerorder-table td {
+  padding: 15px;
+  font-size: 0.92rem;
+  color: #374151;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* HOVER ROW EFFECT */
+.sellerorder-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* LAST ROW BORDER REMOVE */
+.sellerorder-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================
+   DASHBOARD PAGE
+===================================== */
+
+.dash-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: linear-gradient(to bottom, #f8fafc, #eef2ff);
+  min-height: 100vh;
+}
+
+/* Title */
+.dash-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.dash-subtitle {
+  margin-top: -5px;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 35px;
+}
+
+/* =====================================
+   STATISTIC BOXES
+===================================== */
+
+.stats-row {
+  padding: 0 10px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+  border-left-width: 6px;
+  border-left-style: solid;
+}
+
+.stat-card h5 {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.stat-card h2 {
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Border colors */
+.border-blue {
+  border-left-color: #4f46e5;
+}
+
+.border-green {
+  border-left-color: #16a34a;
+}
+
+.border-yellow {
+  border-left-color: #f59e0b;
+}
+
+.border-red {
+  border-left-color: #ef4444;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================
+   CHART BOXES
+===================================== */
+
+.chart-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.08);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-box canvas {
+  max-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .stat-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ===================== User List (Admin Panel Styling) ===================== */
+
+.ul-wrapper {
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+
+.ul-title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #1e293b;
+}
+
+.ul-subtitle {
+  margin-top: -5px;
+  margin-bottom: 25px;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Table Styling */
+.ul-table {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ul-table th {
+  background: #1e293b !important;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+}
+
+.ul-table td {
+  padding: 12px 10px;
+  font-size: 15px;
+}
+
+/* Hover highlight */
+.ul-table tbody tr:hover {
+  background-color: #f3f8ff;
+  transition: 0.2s ease-in-out;
+}
+
+/* Delete Button Styling */
+.ul-delete-btn {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* Mobile improvements */
+@media (max-width: 576px) {
+  .ul-title {
+    font-size: 22px;
+  }
+
+  .ul-subtitle {
+    font-size: 13px;
+  }
+
+  .ul-table th,
+  .ul-table td {
+    font-size: 13px;
+  }
+}
+
+
+/* =========== SELLER LIST (same UI as UserList) =========== */
+
+.ul-wrapper {
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+
+.ul-title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #1e293b;
+}
+
+.ul-subtitle {
+  margin-top: -5px;
+  margin-bottom: 25px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* Table Design */
+.ul-table {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ul-table th {
+  background: #1e293b !important;
+  color: white;
+  padding: 14px;
+  font-size: 15px;
+}
+
+.ul-table td {
+  padding: 14px 10px;
+  font-size: 15px;
+}
+
+.ul-table tbody tr:hover {
+  background-color: #f3f8ff;
+  transition: 0.2s ease-in-out;
+}
+
+/* Delete Button */
+.ul-delete-btn {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* Mobile Support */
+@media (max-width: 576px) {
+  .ul-title {
+    font-size: 22px;
+  }
+
+  .ul-subtitle {
+    font-size: 13px;
+  }
+
+  .ul-table td,
+  .ul-table th {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
